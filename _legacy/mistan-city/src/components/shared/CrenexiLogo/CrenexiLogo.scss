@@ -1,0 +1,11 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 7px;
+  transition-duration: 150ms;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+}

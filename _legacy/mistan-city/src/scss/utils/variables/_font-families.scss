@@ -1,0 +1,12 @@
+$font-family-base: '"Open Sans", "Roboto", "Arial", sans-serif';
+$font-family-primary: '"Cabin Condensed", "Roboto Condensed", "Arial", sans-serif';
+
+:export {
+  base: unquote($font-family-base);
+  primary: unquote($font-family-primary);
+}
+
+$font-families: (
+  base: $font-family-base,
+  primary: $font-family-primary,
+);

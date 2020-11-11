@@ -1,0 +1,81 @@
+@import '~scss/utils/module';
+
+// Layout
+
+.commission {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 5rem 1rem;
+  @include bg-image(cover);
+  text-shadow:
+    2px 4px 6px rgba(0, 0, 0, .6),
+    1px 1px 1px rgba(0, 0, 0, .4);
+
+  &::before, &::after {
+    content: '';
+    @include position(absolute, 0 null null 0);
+  }
+
+  &::before {
+    @include size(100%, 1.5rem);
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  &::after {
+    @include size(100%);
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  &__header,
+  &__main {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.commission:first-of-type::before {
+  content: unset;
+}
+
+// Header
+
+.commission__header {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &::after {
+    content: '';
+    @include position(absolute, null null 5px 50%);
+    @include size(4rem, 5px);
+    background-color: #fff;
+    transform: translateX(-50%);
+  }
+}
+
+.commission__title {
+  padding-bottom: 5px;
+}
+
+.commission__suffix {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: color(light2);
+}
+
+// Main
+
+.commission__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commission__projects-count {
+  margin-top: 3.5rem;
+  text-shadow: none;
+}

@@ -1,0 +1,12 @@
+@import '~scss/utils/module';
+
+.overline {
+  padding: 0 0 .5rem 1px;
+  line-height: 1em;
+  font-size: .8rem;
+  font-weight: 700;
+  color: color(light3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @include truncate(100%);
+}

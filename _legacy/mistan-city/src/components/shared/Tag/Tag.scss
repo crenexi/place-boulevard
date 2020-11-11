@@ -1,0 +1,45 @@
+@import '~scss/utils/module';
+@import '~scss/shared/animations/arrive-zoom';
+
+.tag {
+  $border: 1px solid rgba(255, 255, 255, .5);
+
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 6px 4px;
+  border-top: $border;
+  border-bottom: $border;
+  color: #fff;
+
+  &--has-tooltip {
+    cursor: default;
+  }
+}
+
+.tag__content {
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  font-family: font-family(primary);
+  line-height: 1em;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  @include truncate(auto);
+  max-width: 12rem;
+}
+
+.tag__tooltip {
+  @include position(absolute, null null calc(100% + 4px) 50%);
+  z-index: 9999;
+  min-width: 100%;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 7px;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1.1em;
+  font-size: .65rem;
+  font-weight: 700;
+}

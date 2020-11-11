@@ -1,0 +1,62 @@
+@import '~scss/utils/module';
+@import '~scss/shared/animations/arrive-fade';
+@import '~scss/shared/animations/arrive-descend';
+
+// Layout and cover
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+
+.header__cover {
+  @include position(absolute, 0 null null 0);
+  @include size(100%);
+  @include bg-image(cover);
+
+  &::after {
+    content: '';
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+    background-color: rgba(15, 15, 15, .5);
+  }
+}
+
+// Main content
+
+.header__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include size(100%);
+  padding: 2rem 1rem 4rem;
+}
+
+.header__icon {
+  font-size: 2.5rem;
+  animation: arriveFade 350ms both;
+  animation-delay: 750ms;
+}
+
+.header__title,
+.header__subtitle {
+  font-family: font-family(primary);
+  text-shadow: 0 0 20px rgba(0, 0, 0, .7), 0 0 1px rgba(0, 0, 0, .5);
+  text-align: center;
+}
+
+.header__title {
+  margin-top: .5rem;
+  color: #fff;
+  animation: arriveDescend 500ms ease-out both;
+  animation-delay: 500ms;
+}
+
+.header__subtitle {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  animation: arriveFade 500ms ease-out both;
+  animation-delay: 1s;
+}

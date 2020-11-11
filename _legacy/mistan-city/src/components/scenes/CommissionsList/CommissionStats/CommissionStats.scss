@@ -1,0 +1,31 @@
+@import '~scss/utils/module';
+
+.commission__stat-details {
+  display: flex;
+}
+
+.commission__stat-detail {
+  $border: 1px solid rgba(255, 255, 255, .5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10rem;
+  padding: 0 1rem;
+  justify-content: center;
+  text-align: center;
+
+  &:not(:first-child) {
+    border-left: $border;
+  }
+}
+
+.commission__stat {
+  display: inline-block;
+  padding: 1px 2px;
+  border: 2px solid #fff;
+  // background-color: #fff;
+  border-radius: 3px;
+  font-weight: 700;
+  line-height: 1em;
+}

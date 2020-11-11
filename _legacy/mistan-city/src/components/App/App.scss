@@ -1,0 +1,8 @@
+@import '~scss/utils/module';
+@import '~scss/core/module';
+
+.app {
+  display: grid;
+  grid-template-rows: max-content auto min-content;
+  min-height: 100vh;
+}

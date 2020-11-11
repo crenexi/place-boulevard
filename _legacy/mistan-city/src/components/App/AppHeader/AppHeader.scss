@@ -1,0 +1,38 @@
+@import '~scss/utils/module';
+
+.header,
+.header-spacer {
+  width: 100%;
+  height: $header-height-xs;
+
+  @include breakpoint('gt-xs') {
+    height: $header-height-gt-xs;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1.5rem;
+  @include gradient(theme(storm, dark), theme(storm, light));
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+
+  &--hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-item {
+  &:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
